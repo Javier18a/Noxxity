@@ -1,0 +1,388 @@
+/* =========================
+   CONTACT HERO
+========================= */
+
+.contact-hero{
+
+    min-height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 8% 80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(56,189,248,0.12),
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(14,165,233,0.08),
+    transparent 30%);
+}
+
+.contact-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:rgba(56,189,248,0.08);
+
+    filter:blur(120px);
+
+    top:-150px;
+    right:-100px;
+}
+
+.contact-hero-content{
+
+    max-width:850px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-hero-content h2{
+
+    font-size:5rem;
+
+    line-height:1.1;
+
+    margin:25px 0;
+}
+
+.contact-hero-content p{
+
+    color:var(--gray);
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    max-width:760px;
+
+    margin:auto;
+}
+
+/* =========================
+   CONTACTS
+========================= */
+
+.contacts{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:120px 0;
+}
+
+.contacts-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.contact-card{
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.02)
+    );
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    border-radius:30px;
+
+    padding:45px 35px;
+
+    text-decoration:none;
+
+    color:white;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:0.35s;
+}
+
+.contact-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+    background:rgba(255,255,255,0.04);
+
+    border-radius:50%;
+
+    top:-120px;
+    right:-120px;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(56,189,248,0.25);
+}
+
+.contact-card i{
+
+    font-size:3.2rem;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-card h3{
+
+    font-size:1.8rem;
+
+    margin-bottom:15px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-card p{
+
+    color:var(--gray);
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-card span{
+
+    color:var(--primary);
+
+    font-size:0.95rem;
+
+    letter-spacing:1px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* =========================
+   ICON COLORS
+========================= */
+
+.discord i{
+
+    color:#5865F2;
+}
+
+.whatsapp i{
+
+    color:#25D366;
+}
+
+.gmail i{
+
+    color:#EA4335;
+}
+
+.tiktok i{
+
+    color:#ffffff;
+}
+
+.instagram i{
+
+    color:#E1306C;
+}
+
+.facebook i{
+
+    color:#1877F2;
+}
+
+/* =========================
+   CONTACT CTA
+========================= */
+
+.contact-cta{
+
+    width:90%;
+
+    margin:auto;
+
+    margin-bottom:120px;
+
+    padding:100px 50px;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(56,189,248,0.14),
+        rgba(14,165,233,0.05)
+    );
+
+    border:1px solid rgba(56,189,248,0.08);
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.contact-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    background:rgba(56,189,248,0.08);
+
+    filter:blur(120px);
+
+    top:-200px;
+    left:-100px;
+}
+
+.contact-cta-content{
+
+    max-width:700px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-cta-content span{
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+}
+
+.contact-cta-content h2{
+
+    font-size:4rem;
+
+    margin:25px 0;
+}
+
+.contact-cta-content p{
+
+    color:var(--gray);
+
+    line-height:2;
+
+    margin-bottom:40px;
+}
+
+/* =========================
+   HOVER GLOW
+========================= */
+
+.contact-card:hover::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 0 40px rgba(56,189,248,0.15);
+
+    pointer-events:none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .contact-hero-content h2{
+
+        font-size:4rem;
+    }
+
+    .contact-cta-content h2{
+
+        font-size:3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .contact-hero-content h2{
+
+        font-size:3rem;
+    }
+
+    .contact-cta-content h2{
+
+        font-size:2.5rem;
+    }
+
+    .contact-cta{
+
+        padding:80px 30px;
+    }
+}
+
+@media(max-width:550px){
+
+    .contact-hero-content h2{
+
+        font-size:2.4rem;
+    }
+
+    .contact-cta-content h2{
+
+        font-size:2.1rem;
+    }
+
+    .contact-card{
+
+        padding:40px 25px;
+    }
+}

@@ -1,0 +1,488 @@
+/* =========================
+   MEMORIES HERO
+========================= */
+
+.memories-hero{
+
+    min-height:90vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 8% 80px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(56,189,248,0.12),
+    transparent 30%),
+
+    radial-gradient(circle at bottom right,
+    rgba(14,165,233,0.08),
+    transparent 30%);
+}
+
+.memories-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:rgba(56,189,248,0.08);
+
+    filter:blur(120px);
+
+    top:-150px;
+    left:-100px;
+}
+
+.memories-hero-content{
+
+    max-width:850px;
+
+    z-index:2;
+}
+
+.memories-hero-content h2{
+
+    font-size:5rem;
+
+    line-height:1.1;
+
+    margin:25px 0;
+}
+
+.memories-hero-content p{
+
+    color:var(--gray);
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    max-width:750px;
+
+    margin:auto;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+
+    width:90%;
+
+    margin:auto;
+
+    padding:120px 0;
+}
+
+.timeline-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:80px;
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.timeline-item.reverse .timeline-image{
+
+    order:2;
+}
+
+.timeline-item.reverse .timeline-content{
+
+    order:1;
+}
+
+.timeline-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    height:420px;
+}
+
+.timeline-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+.timeline-image:hover img{
+
+    transform:scale(1.08);
+}
+
+.timeline-content{
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.02)
+    );
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:50px 40px;
+
+    border-radius:30px;
+}
+
+.timeline-content span{
+
+    color:var(--primary);
+
+    letter-spacing:2px;
+}
+
+.timeline-content h3{
+
+    font-size:2.3rem;
+
+    margin:20px 0;
+}
+
+.timeline-content p{
+
+    color:var(--gray);
+
+    line-height:2;
+}
+
+/* =========================
+   MEMORIES GALLERY
+========================= */
+
+.memories-gallery{
+
+    width:90%;
+
+    margin:auto;
+
+    padding-bottom:120px;
+}
+
+.memories-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    grid-auto-rows:250px;
+
+    gap:20px;
+}
+
+.memory-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:0.4s;
+}
+
+.memory-box.large{
+
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.memory-box img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s;
+}
+
+.memory-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.15)
+    );
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:30px;
+
+    opacity:0;
+
+    transition:0.4s;
+}
+
+.memory-overlay h3{
+
+    font-size:1.5rem;
+}
+
+.memory-box:hover img{
+
+    transform:scale(1.08);
+}
+
+.memory-box:hover .memory-overlay{
+
+    opacity:1;
+}
+
+.memory-box:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(56,189,248,0.25);
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+
+    width:90%;
+
+    margin:auto;
+
+    padding-bottom:120px;
+}
+
+.experience-container{
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(56,189,248,0.12),
+        rgba(14,165,233,0.04)
+    );
+
+    border:1px solid rgba(56,189,248,0.08);
+
+    border-radius:35px;
+
+    padding:70px 50px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+.experience-text span{
+
+    color:var(--primary);
+
+    letter-spacing:3px;
+}
+
+.experience-text h2{
+
+    font-size:3.5rem;
+
+    line-height:1.2;
+
+    margin:20px 0;
+}
+
+.experience-text p{
+
+    color:var(--gray);
+
+    line-height:2;
+}
+
+.experience-cards{
+
+    display:grid;
+
+    gap:25px;
+}
+
+.experience-card{
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    padding:35px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+}
+
+.experience-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(56,189,248,0.25);
+}
+
+.experience-card i{
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+}
+
+.experience-card h3{
+
+    margin-bottom:10px;
+
+    font-size:1.5rem;
+}
+
+.experience-card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .timeline-item,
+    .experience-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item.reverse .timeline-image,
+    .timeline-item.reverse .timeline-content{
+
+        order:unset;
+    }
+
+    .memories-grid{
+
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+    .memory-box.large{
+
+        grid-column:span 2;
+    }
+
+    .memories-hero-content h2{
+
+        font-size:4rem;
+    }
+
+    .experience-text h2{
+
+        font-size:3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .memories-hero-content h2{
+
+        font-size:3rem;
+    }
+
+    .timeline-content h3{
+
+        font-size:2rem;
+    }
+
+    .experience-text h2{
+
+        font-size:2.5rem;
+    }
+
+    .experience-container{
+
+        padding:60px 30px;
+    }
+}
+
+@media(max-width:650px){
+
+    .memories-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .memory-box.large{
+
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .timeline-image{
+
+        height:300px;
+    }
+
+    .memories-hero-content h2{
+
+        font-size:2.4rem;
+    }
+
+    .experience-text h2{
+
+        font-size:2.2rem;
+    }
+
+    .timeline-content{
+
+        padding:40px 25px;
+    }
+}
