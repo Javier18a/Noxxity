@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="../Styles/contact.css">
 
     <!-- ICONOS -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -23,6 +22,7 @@
         <nav class="navbar">
 
             <div class="logo">
+                <img src="../Src/imgs/Logo.png" alt="">
                 <h1>Noxxity</h1>
             </div>
 
@@ -82,9 +82,7 @@
         <div class="contacts-grid">
 
             <!-- DISCORD -->
-            <a href="#"
-            class="contact-card discord"
-            target="_blank">
+            <a href="https://discord.gg/VvKsphYjgr" class="contact-card discord" target="_blank">
 
                 <i class="fab fa-discord"></i>
 
@@ -100,9 +98,7 @@
             </a>
 
             <!-- WHATSAPP -->
-            <a href="#"
-            class="contact-card whatsapp"
-            target="_blank">
+            <a href="https://chat.whatsapp.com/JaNAS3tcS7MAG7pjysxWxn" class="contact-card whatsapp" target="_blank">
 
                 <i class="fab fa-whatsapp"></i>
 
@@ -118,8 +114,7 @@
             </a>
 
             <!-- GMAIL -->
-            <a href="mailto:noxxity@gmail.com"
-            class="contact-card gmail">
+            <a href="mailto:noxxity.oficial@gmail.com" class="contact-card gmail">
 
                 <i class="fas fa-envelope"></i>
 
@@ -135,9 +130,7 @@
             </a>
 
             <!-- TIKTOK -->
-            <a href="#"
-            class="contact-card tiktok"
-            target="_blank">
+            <a href="https://www.tiktok.com/@noxxity8" class="contact-card tiktok" target="_blank">
 
                 <i class="fab fa-tiktok"></i>
 
@@ -153,9 +146,8 @@
             </a>
 
             <!-- INSTAGRAM -->
-            <a href="#"
-            class="contact-card instagram"
-            target="_blank">
+            <a href="https://www.instagram.com/noxxity.oficial?utm_source=qr&igsh=NG91Zmhua2d4ajFs"
+                class="contact-card instagram" target="_blank">
 
                 <i class="fab fa-instagram"></i>
 
@@ -171,9 +163,7 @@
             </a>
 
             <!-- FACEBOOK -->
-            <a href="#"
-            class="contact-card facebook"
-            target="_blank">
+            <a href="https://www.facebook.com/share/1E7KPyDSKF/" class="contact-card facebook" target="_blank">
 
                 <i class="fab fa-facebook"></i>
 
@@ -191,6 +181,59 @@
         </div>
 
     </section>
+
+    <section class="solicitudes">
+        
+        <h1>Solicitudes</h1>
+        <div class="solicitud-form-box">
+    
+            <form id="solicitudForm">
+    
+                <div class="input-group">
+                    <label>Nombre completo</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                </div>
+    
+                <div class="input-group">
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo" placeholder="ejemplo@gmail.com" required>
+                </div>
+    
+                <div class="input-group">
+                    <label>Tipo de solicitud</label>
+                    <select id="tipo">
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="colaboracion">Colaboración</option>
+                        <option value="evento">Organización de evento</option>
+                        <option value="voluntariado">Voluntariado</option>
+                        <option value="Emprendimiento">Emprendimiento</option>
+                        <option value="propuesta">Propuesta de proyecto</option>
+                        <option value="duda">Duda o consulta</option>
+                        <option value="otro">Otro</option>
+    
+                    </select>
+                </div>
+    
+                <div class="input-group">
+                    <label>Descripción</label>
+                    <textarea id="descripcion" rows="5" placeholder="Describe solicitud..." required></textarea>
+                </div>
+    
+                <div class="input-group">
+                    <label>Red social o contacto</label>
+                    <input type="text" id="contacto" placeholder="@usuario / WhatsApp / Link">
+                </div>
+    
+                <button type="submit" class="btn-solicitud">
+                    Enviar solicitud
+                </button>
+    
+            </form>
+    
+        </div>
+
+    </section>
+
 
     <!-- CTA -->
     <section class="contact-cta">
@@ -242,7 +285,8 @@
 
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../Js/script.js"></script>
+    <script src="../Js/contac.js"></script>
 
 </body>
 

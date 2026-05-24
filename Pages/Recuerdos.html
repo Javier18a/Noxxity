@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="../Styles/recuerdo.css">
 
     <!-- ICONOS -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -23,6 +22,7 @@
         <nav class="navbar">
 
             <div class="logo">
+                <img src="../Src/imgs/Logo.png" alt="">
                 <h1>Noxxity</h1>
             </div>
 
@@ -69,95 +69,7 @@
     </section>
 
     <!-- TIMELINE -->
-    <section class="timeline">
-
-        <div class="section-title">
-
-            <span>RECUERDOS</span>
-
-            <h2>Nuestra trayectoria</h2>
-
-        </div>
-
-        <div class="timeline-container">
-
-            <!-- ITEM -->
-            <div class="timeline-item">
-
-                <div class="timeline-image">
-
-                    <img src="img/event1.jpg" alt="Primer evento">
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <span>2026</span>
-
-                    <h3>Primer encuentro</h3>
-
-                    <p>
-                        Uno de los primeros momentos donde
-                        comenzaron a surgir ideas, proyectos
-                        y conexiones dentro de la comunidad.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- ITEM -->
-            <div class="timeline-item reverse">
-
-                <div class="timeline-image">
-
-                    <img src="img/event2.jpg" alt="Comunidad">
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <span>2026</span>
-
-                    <h3>Crecimiento de la comunidad</h3>
-
-                    <p>
-                        Más personas comenzaron a formar parte
-                        de Noxxity, compartiendo ideas
-                        y nuevas oportunidades.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- ITEM -->
-            <div class="timeline-item">
-
-                <div class="timeline-image">
-
-                    <img src="img/project.jpg" alt="Proyecto">
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <span>2026</span>
-
-                    <h3>Nuevos proyectos</h3>
-
-                    <p>
-                        Se iniciaron nuevos proyectos y conceptos
-                        enfocados en innovación y comunidad.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
+    
 
     <!-- GALERIA -->
     <section class="memories-gallery">
@@ -167,74 +79,85 @@
             <span>GALERÍA</span>
 
             <h2>Momentos destacados</h2>
+            <h5>Toca para ver más</h5>
 
         </div>
 
         <div class="memories-grid">
 
-            <div class="memory-box large">
+            <div class="memory-box large" data-gallery="team">
 
-                <img src="img/team.jpg" alt="Equipo">
+                <img src="../Src/imgs/Equipo.jpeg" alt="Equipo">
 
                 <div class="memory-overlay">
-
                     <h3>Equipo Noxxity</h3>
-
                 </div>
 
             </div>
 
-            <div class="memory-box">
+            <div class="memory-box" data-gallery="development">
 
-                <img src="img/work.jpg" alt="Trabajo">
+                <img src="../Src/imgs/Logo.png" alt="Trabajo">
 
                 <div class="memory-overlay">
-
                     <h3>Desarrollo</h3>
-
                 </div>
 
             </div>
 
-            <div class="memory-box">
+            <div class="memory-box" data-gallery="events">
 
-                <img src="img/event3.jpg" alt="Evento">
+                <img src="../Src/imgs/ft4.jpeg" alt="Evento">
 
                 <div class="memory-overlay">
-
                     <h3>Eventos</h3>
-
                 </div>
 
             </div>
 
-            <div class="memory-box">
+            <!-- <div class="memory-box" data-gallery="community">
 
                 <img src="img/community.jpg" alt="Comunidad">
 
                 <div class="memory-overlay">
-
                     <h3>Comunidad</h3>
-
                 </div>
 
             </div>
 
-            <div class="memory-box">
+            <div class="memory-box" data-gallery="ideas">
 
                 <img src="img/project2.jpg" alt="Ideas">
 
                 <div class="memory-overlay">
-
                     <h3>Ideas</h3>
-
                 </div>
+
+            </div> -->
+
+        </div>
+
+    </section>
+
+    <!-- MODAL GALERIA -->
+
+    <div class="gallery-modal">
+
+        <div class="gallery-modal-content">
+
+            <span class="close-gallery">
+                <i class="fas fa-times"></i>
+            </span>
+
+            <div class="gallery-view">
+
+                <!-- IMG DINAMICAS -->
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
     <!-- EXPERIENCIA -->
     <section class="experience">
@@ -273,7 +196,7 @@
 
                 </div>
 
-                <div class="experience-card">
+                <!-- <div class="experience-card">
 
                     <i class="fas fa-users"></i>
 
@@ -295,7 +218,7 @@
                         Nuevas oportunidades y proyectos.
                     </p>
 
-                </div>
+                </div> -->
 
             </div>
 

@@ -164,3 +164,122 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 
 });
+
+// =========================
+// MODAL GALERIA
+// =========================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const boxes = document.querySelectorAll(".memory-box");
+
+    const modal = document.querySelector(".gallery-modal");
+
+    const galleryView = document.querySelector(".gallery-view");
+
+    const closeBtn = document.querySelector(".close-gallery");
+
+    // =========================
+    // IMAGENES
+    // =========================
+
+    const galleries = {
+
+        team: [
+            "../Src/imgs/ft1.jpeg",
+            "../Src/imgs/ft2.jpeg",
+            "../Src/imgs/ft3.jpeg",
+            "../Src/imgs/ft6.jpeg",
+            "../Src/imgs/ft9.jpeg",
+            "../Src/imgs/ft11.jpeg",
+            "../Src/imgs/ft12.jpeg",
+            "../Src/imgs/ft13.jpeg"
+        ],
+
+        development: [
+            "../Src/imgs/Zentryx.jpeg"
+        ],
+
+        events: [
+            "../Src/imgs/ft4.jpeg",
+            "../Src/imgs/ft5.jpeg",
+            "../Src/imgs/ft7.jpeg",
+            "../Src/imgs/ft8.jpeg",
+            "../Src/imgs/ft10.jpeg"
+        ],
+
+        // community: [
+        //     "img/community.jpg",
+        //     "img/community2.jpg",
+        //     "img/community3.jpg"
+        // ],
+
+        // ideas: [
+        //     "img/project.jpg",
+        //     "img/project2.jpg",
+        //     "img/project3.jpg"
+        // ]
+
+    };
+
+    // =========================
+    // ABRIR MODAL
+    // =========================
+
+    boxes.forEach(box => {
+
+        box.addEventListener("click", () => {
+
+            const category = box.dataset.gallery;
+
+            if(!galleries[category]) return;
+
+            galleryView.innerHTML = "";
+
+            galleries[category].forEach(src => {
+
+                const img = document.createElement("img");
+
+                img.src = src;
+
+                galleryView.appendChild(img);
+
+            });
+
+            modal.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+        });
+
+    });
+
+    // =========================
+    // CERRAR MODAL
+    // =========================
+
+    closeBtn.addEventListener("click", () => {
+
+        modal.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+    });
+
+    // =========================
+    // CLICK FUERA
+    // =========================
+
+    modal.addEventListener("click", (e) => {
+
+        if(e.target === modal){
+
+            modal.classList.remove("active");
+
+            document.body.style.overflow = "auto";
+
+        }
+
+    });
+
+});
