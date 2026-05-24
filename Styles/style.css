@@ -66,7 +66,7 @@ header{
 }
 
 .navbar{
-    width:90%;
+    width:85%;
     margin:auto;
     height:85px;
 
@@ -571,7 +571,7 @@ footer{
 @media(max-width:768px){
 
     .navbar{
-        width: 95%;
+        width: 90%;
     }
     .menu-btn{
         display:block;

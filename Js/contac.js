@@ -6,31 +6,25 @@ form.addEventListener("submit", function (e) {
     const nombre = document.getElementById("nombre").value;
     const correo = document.getElementById("correo").value;
     const tipo = document.getElementById("tipo").value;
-    const negocio = document.getElementById("negocio").value;
-    const categoria = document.getElementById("categoria").value;
     const descripcion = document.getElementById("descripcion").value;
     const contacto = document.getElementById("contacto").value;
 
     const destinatario = "noxxity.oficial@gmail.com";
 
-    const asunto = `Solicitud de ${tipo} - ${negocio}`;
+    const asunto = `Solicitud de ${tipo}`;
 
     const mensaje = `
-Nombre: ${nombre}
+    Nombre: ${nombre}
 
-Correo: ${correo}
+    Correo: ${correo}
 
-Tipo: ${tipo}
+    Tipo: ${tipo}
 
-Negocio/Servicio: ${negocio}
+    Descripción:
+    ${descripcion}
 
-Categoría: ${categoria}
-
-Descripción:
-${descripcion}
-
-Contacto:
-${contacto}
+    Contacto:
+    ${contacto}
         `;
 
     const mailtoLink = `mailto:${destinatario}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(mensaje)}`;
