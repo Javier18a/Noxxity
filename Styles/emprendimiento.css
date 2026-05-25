@@ -222,7 +222,7 @@
 
 .project-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-5px);
 
     border-color:rgba(56,189,248,0.25);
 }
@@ -301,6 +301,13 @@
     border-radius:20px;
 
     font-size:0.8rem;
+}
+
+.project-tags small a{
+
+    color:var(--primary);
+
+    text-decoration:underline;
 }
 
 /* =========================
