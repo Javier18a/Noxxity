@@ -193,7 +193,8 @@ window.addEventListener("DOMContentLoaded", () => {
             "../Src/imgs/ft9.jpeg",
             "../Src/imgs/ft11.jpeg",
             "../Src/imgs/ft12.jpeg",
-            "../Src/imgs/ft13.jpeg"
+            "../Src/imgs/ft13.jpeg",
+            "../Src/imgs/BorealLabs-Noxxity.jpeg"
         ],
 
         development: [
