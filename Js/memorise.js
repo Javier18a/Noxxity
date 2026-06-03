@@ -187,6 +187,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         team: [
             "../Src/imgs/ft1.jpeg",
+            "../Src/imgs/ft14.jpeg",
             "../Src/imgs/ft2.jpeg",
             "../Src/imgs/ft3.jpeg",
             "../Src/imgs/ft6.jpeg",
@@ -194,7 +195,8 @@ window.addEventListener("DOMContentLoaded", () => {
             "../Src/imgs/ft11.jpeg",
             "../Src/imgs/ft12.jpeg",
             "../Src/imgs/ft13.jpeg",
-            "../Src/imgs/BorealLabs-Noxxity.jpeg"
+            "../Src/imgs/BorealLabs-Noxxity.jpeg",
+            "../Src/imgs/ft17.jpeg"
         ],
 
         development: [
@@ -206,7 +208,8 @@ window.addEventListener("DOMContentLoaded", () => {
             "../Src/imgs/ft5.jpeg",
             "../Src/imgs/ft7.jpeg",
             "../Src/imgs/ft8.jpeg",
-            "../Src/imgs/ft10.jpeg"
+            "../Src/imgs/ft10.jpeg",
+            "../Src/imgs/ft16.jpeg"
         ],
 
         // community: [
