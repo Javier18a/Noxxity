@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Src/imgs/Logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <title>NoxConnect 2026 - Emprendimientos</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>NoxConnect 2026</h1>
+
+        <p>
+            Formulario de Registro de Asistencia
+        </p>
+
+        <form action="https://formsubmit.co/noxxity.oficial@gmail.com" method="POST">
+
+            <!-- Configuración de FormSubmit -->
+            <input type="hidden" name="_subject" value="📋 Nuevo registro - NoxConnect 2026">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Opcional: Redirigir después del envío -->
+            <!--
+    <input type="hidden" name="_next" value="https://noxxity.com/gracias.html">
+    -->
+
+            <div class="form-group">
+                <label>Nombre(s)</label>
+                <input type="text" name="Nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label>Apellido(s)</label>
+                <input type="text" name="Apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" name="Correo electrónico" required>
+            </div>
+
+            <div class="form-group">
+                <label>Número de teléfono</label>
+                <input type="tel" name="Número de teléfono" required>
+            </div>
+
+            <div class="form-group">
+                <label>Número de identidad</label>
+                <input type="text" name="Número de identidad">
+                <small>Opcional</small>
+            </div>
+
+            <div class="form-group">
+                <label>Ciudad o lugar de procedencia</label>
+                <input type="text" name="Procedencia" required>
+            </div>
+
+            <div class="form-group">
+                <label>Institución de procedencia</label>
+                <select name="Tipo de institución" required>
+                    <option value="">Seleccione una opción</option>
+                    <option>Universidad</option>
+                    <option>Empresa</option>
+                    <option>Emprendimiento</option>
+                    <option>Independiente</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre de la institución / empresa / emprendimiento</label>
+                <input type="text" name="Institución">
+            </div>
+
+            <div class="form-group">
+                <label>Rol principal</label>
+                <select name="Rol principal" required>
+                    <option value="">Seleccione una opción</option>
+                    <option>Estudiante</option>
+                    <option>Emprendedor</option>
+                    <option>Profesional</option>
+                    <option>Docente</option>
+                    <option>Freelancer</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Área de interés</label>
+                <select name="Área de interés" required>
+                    <option value="">Seleccione una opción</option>
+                    <option>Desarrollo</option>
+                    <option>Marketing</option>
+                    <option>Diseño</option>
+                    <option>Comunicación</option>
+                    <option>Mercadeo</option>
+                    <option>Innovación</option>
+                    <option>Inteligencia Artificial</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="datos" name="Acepta tratamiento de datos" value="Sí" required>
+
+                <label for="datos">
+                    Acepto el tratamiento de mis datos personales para fines relacionados con la organización del
+                    evento.
+                </label>
+            </div>
+
+            <div class="form-group checkbox">
+                <input type="checkbox" id="fotos" name="Autoriza uso de fotografías" value="Sí" required>
+
+                <label for="fotos">
+                    Autorizo el uso de fotografías y videos tomados durante el evento para publicaciones de Noxxity.
+                </label>
+            </div>
+
+            <button class="btn" type="submit">
+                Registrar asistencia
+            </button>
+
+        </form>
+
+
+        <script src="Js/main.js"></script>
+</body>
+
+</html>
