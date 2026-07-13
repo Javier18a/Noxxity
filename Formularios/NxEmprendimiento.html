@@ -150,114 +150,9 @@
 
         </form>
 
+    </div>
 
-        <!-- Modal de confirmación -->
-        <style>
-            /* Fondo del modal */
-            #nxModal {
-                position: fixed;
-                inset: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: rgba(7, 17, 31, .70);
-                backdrop-filter: blur(8px);
-                z-index: 99999;
-
-                opacity: 0;
-                visibility: hidden;
-                transition: .35s ease;
-            }
-
-            #nxModal.show {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            /* Tarjeta */
-            .nx-modal-card {
-                width: 430px;
-                max-width: 90%;
-                background: #fff;
-                border-radius: 22px;
-                padding: 45px 35px;
-                text-align: center;
-                box-shadow:
-                    0 30px 80px rgba(0, 0, 0, .35),
-                    0 10px 25px rgba(0, 0, 0, .15);
-                animation: modalEntrada .45s ease;
-            }
-
-            /* Ícono */
-            .nx-success-icon {
-                width: 110px;
-                height: 110px;
-                margin: 0 auto 25px;
-                border-radius: 50%;
-                background: linear-gradient(135deg, #34d399, #16a34a);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow:
-                    0 15px 35px rgba(22, 163, 74, .45),
-                    inset 0 2px 8px rgba(255, 255, 255, .35);
-            }
-
-            .nx-success-icon i {
-                color: white;
-                font-size: 56px;
-            }
-
-            /* Título */
-            .nx-modal-card h2 {
-                margin: 0;
-                font-size: 30px;
-                font-weight: 700;
-                color: #07111F;
-            }
-
-            /* Texto */
-            .nx-modal-card p {
-                margin: 18px 0 32px;
-                color: #5b6470;
-                font-size: 17px;
-                line-height: 1.6;
-            }
-
-            /* Botón */
-            #nxClose {
-                width: 100%;
-                padding: 15px;
-                border: none;
-                border-radius: 12px;
-                background: #07111F;
-                color: white;
-                font-size: 16px;
-                font-weight: 600;
-                cursor: pointer;
-                transition: .25s;
-            }
-
-            #nxClose:hover {
-                background: #0f1f38;
-                transform: translateY(-2px);
-                box-shadow: 0 10px 25px rgba(7, 17, 31, .35);
-            }
-
-            @keyframes modalEntrada {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px) scale(.9);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                }
-            }
-        </style>
-
-        <div id="nxModal">
+    <div id="nxModal">
             <div class="nx-modal-card">
 
                 <div class="nx-success-icon">
@@ -275,57 +170,7 @@
 
             </div>
         </div>
-
-        <script>
-            (function () {
-
-                const form = document.getElementById('nxForm');
-                const modal = document.getElementById('nxModal');
-                const closeBtn = document.getElementById('nxClose');
-
-                function showModal() {
-                    modal.classList.add("show");
-                }
-
-                function hideModal() {
-                    modal.classList.remove("show");
-                }
-
-                form.addEventListener('submit', function (e) {
-
-                    e.preventDefault();
-
-                    const url = form.action;
-                    const data = new FormData(form);
-
-                    fetch(url, {
-                        method: 'POST',
-                        body: data,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                        .then(response => {
-                            showModal();
-                            form.reset();
-                        })
-                        .catch(error => {
-                            showModal();
-                        });
-
-                });
-
-                closeBtn.addEventListener('click', hideModal);
-
-                modal.addEventListener('click', function (e) {
-                    if (e.target === modal) {
-                        hideModal();
-                    }
-                });
-
-            })();
-        </script>
-
+        
         <script src="Js/main.js"></script>
 </body>
 
