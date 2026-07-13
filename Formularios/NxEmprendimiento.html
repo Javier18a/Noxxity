@@ -29,7 +29,7 @@
             <input type="hidden" name="_captcha" value="false">
 
 
-            <input type="hidden" name="_next" value=""> 
+            <input type="hidden" name="_next" value="">
 
             <div class="section-title">
                 <i class="fa-solid fa-user"></i>
@@ -128,7 +128,7 @@
             </div>
 
             <div class="form-group checkbox">
-                <input type="checkbox" id="datos" name="Acepta tratamiento de datos" value="Sí" required>
+                <input type="checkbox" id="datos" name="Acepta tratamiento de datos" value="Sí">
 
                 <label for="datos">
                     Acepto el tratamiento de mis datos personales para fines relacionados con la organización del
@@ -137,7 +137,7 @@
             </div>
 
             <div class="form-group checkbox">
-                <input type="checkbox" id="fotos" name="Autoriza uso de fotografías" value="Sí" required>
+                <input type="checkbox" id="fotos" name="Autoriza uso de fotografías" value="Sí">
 
                 <label for="fotos">
                     Autorizo el uso de fotografías y videos tomados durante el evento para publicaciones de Noxxity.
@@ -152,46 +152,177 @@
 
 
         <!-- Modal de confirmación -->
-        <div id="nxModal" style="display:none;position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;z-index:9999;">
-            <div style="background:#fff;padding:24px;border-radius:8px;max-width:90%;width:420px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.2);">
-                <div style="font-size:40px;color:#28a745;margin-bottom:16px;">
+        <style>
+            /* Fondo del modal */
+            #nxModal {
+                position: fixed;
+                inset: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: rgba(7, 17, 31, .70);
+                backdrop-filter: blur(8px);
+                z-index: 99999;
+
+                opacity: 0;
+                visibility: hidden;
+                transition: .35s ease;
+            }
+
+            #nxModal.show {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* Tarjeta */
+            .nx-modal-card {
+                width: 430px;
+                max-width: 90%;
+                background: #fff;
+                border-radius: 22px;
+                padding: 45px 35px;
+                text-align: center;
+                box-shadow:
+                    0 30px 80px rgba(0, 0, 0, .35),
+                    0 10px 25px rgba(0, 0, 0, .15);
+                animation: modalEntrada .45s ease;
+            }
+
+            /* Ícono */
+            .nx-success-icon {
+                width: 110px;
+                height: 110px;
+                margin: 0 auto 25px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #34d399, #16a34a);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow:
+                    0 15px 35px rgba(22, 163, 74, .45),
+                    inset 0 2px 8px rgba(255, 255, 255, .35);
+            }
+
+            .nx-success-icon i {
+                color: white;
+                font-size: 56px;
+            }
+
+            /* Título */
+            .nx-modal-card h2 {
+                margin: 0;
+                font-size: 30px;
+                font-weight: 700;
+                color: #07111F;
+            }
+
+            /* Texto */
+            .nx-modal-card p {
+                margin: 18px 0 32px;
+                color: #5b6470;
+                font-size: 17px;
+                line-height: 1.6;
+            }
+
+            /* Botón */
+            #nxClose {
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-radius: 12px;
+                background: #07111F;
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: .25s;
+            }
+
+            #nxClose:hover {
+                background: #0f1f38;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 25px rgba(7, 17, 31, .35);
+            }
+
+            @keyframes modalEntrada {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px) scale(.9);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        </style>
+
+        <div id="nxModal">
+            <div class="nx-modal-card">
+
+                <div class="nx-success-icon">
                     <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <h2 style="margin:0 0 12px;font-size:20px;">¡Enviado!</h2>
-                <p style="margin:0 0 18px;color:#333;">Su formulario ha sido enviado correctamente.</p>
-                <button id="nxClose" style="padding:8px 14px;border:none;background:#111;color:#fff;border-radius:6px;cursor:pointer;">Aceptar</button>
+
+                <h2>¡Registro completado!</h2>
+
+                <p>
+                    Su formulario ha sido enviado correctamente.
+                    Gracias por registrarse.
+                </p>
+
+                <button id="nxClose">Continuar</button>
+
             </div>
         </div>
 
         <script>
-            (function(){
+            (function () {
+
                 const form = document.getElementById('nxForm');
                 const modal = document.getElementById('nxModal');
                 const closeBtn = document.getElementById('nxClose');
 
-                function showModal(){ modal.style.display = 'flex'; }
-                function hideModal(){ modal.style.display = 'none'; }
+                function showModal() {
+                    modal.classList.add("show");
+                }
 
-                form.addEventListener('submit', function(e){
+                function hideModal() {
+                    modal.classList.remove("show");
+                }
+
+                form.addEventListener('submit', function (e) {
+
                     e.preventDefault();
+
                     const url = form.action;
                     const data = new FormData(form);
 
-                    fetch(url, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-                    .then(response => {
-                        // FormSubmit devuelve 200 o 302; mostramos modal en caso de éxito
-                        showModal();
-                        form.reset();
+                    fetch(url, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
                     })
-                    .catch(err => {
-                        // en caso de error también mostrar mensaje simple
-                        showModal();
-                    });
+                        .then(response => {
+                            showModal();
+                            form.reset();
+                        })
+                        .catch(error => {
+                            showModal();
+                        });
+
                 });
 
-                closeBtn.addEventListener('click', function(){ hideModal(); });
-                // cerrar al hacer click fuera del cuadro
-                modal.addEventListener('click', function(e){ if(e.target===modal) hideModal(); });
+                closeBtn.addEventListener('click', hideModal);
+
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) {
+                        hideModal();
+                    }
+                });
+
             })();
         </script>
 
