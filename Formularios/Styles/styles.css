@@ -241,6 +241,16 @@ hr {
     }
 }
 
+.otro-campo{
+    display:none;
+    margin-top:12px;
+    animation: aparecer .25s ease;
+}
+
+.otro-campo.show{
+    display:block;
+}
+
 /* Fondo del modal */
 #nxModal {
     position: fixed;

@@ -45,3 +45,28 @@
     });
 
 })();
+
+function activarCampoOtro(selectId, grupoId, inputId) {
+
+    const select = document.getElementById(selectId);
+    const grupo = document.getElementById(grupoId);
+    const input = document.getElementById(inputId);
+
+    select.addEventListener("change", function () {
+
+        if (this.value === "Otro") {
+            grupo.classList.add("show");
+            input.required = true;
+        } else {
+            grupo.classList.remove("show");
+            input.required = false;
+            input.value = "";
+        }
+
+    });
+
+}
+
+activarCampoOtro("tipoInstitucion", "otroInstitucionGroup", "otroInstitucion");
+activarCampoOtro("rolPrincipal", "otroRolGroup", "otroRol");
+activarCampoOtro("areaInteres", "otraAreaGroup", "otraArea");
