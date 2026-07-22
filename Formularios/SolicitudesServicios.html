@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud | Noxxity</title>
+    <link rel="icon" href="../Src/imgs/Logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/solicitud.css">
+    <link rel="stylesheet" href="Styles/solicitudesServicios.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../Pages/servicios.html" class="logo"> <img src="../Src/imgs/Logo.png" alt="">Noxxity</a>
+            <a href="../Pages/servicios.html"> Volver al inicio </a>
+        </nav>
+    </header>
+
+    <section class="form-container">
+
+        <div class="form-header">
+            <h1> Centro de Solicitudes NOXXITY </h1>
+            <p>
+                Completa el formulario y cuéntanos cómo podemos ayudarte.
+                Nuestro equipo revisará tu solicitud y se pondrá en contacto contigo.
+            </p>
+        </div>
+
+        <form action="https://formsubmit.co/noxxiy.oficial@gmail.com" method="POST" enctype="multipart/form-data">
+
+            <!-- CONFIGURACIÓN FORMSUBMIT -->
+            <input type="hidden" name="_subject" value="Nueva Solicitud NOXXITY">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- DATOS PERSONALES -->
+
+            <h2> Información Personal </h2>
+
+            <div class="grid">
+                <input type="text" name="Nombre" placeholder="Nombre completo" required>
+                <input type="email" name="Correo" placeholder="Correo electrónico" required>
+                <input type="tel" name="Telefono" placeholder="Número de teléfono" required>
+                <input type="text" name="Identidad" placeholder="Número de identidad o documento" required>
+                <input type="text" name="Empresa" placeholder="Empresa o negocio (Opcional)">
+                <input type="text" name="Ciudad" placeholder="Ciudad">
+            </div>
+
+            <select name="TipoCliente" id="tipoCliente" class="tipo-cliente" required>
+                <option value="">Selecciona el tipo de cliente</option>
+                <option value="Persona">Persona</option>
+                <option value="Emprendimiento">Emprendimiento</option>
+                <option value="Empresa">Empresa</option>
+                <option value="Institución">Institución</option>
+                <option value="Otro">Otro</option>
+            </select>
+
+            <div id="otroClienteContainer" style="display: none;">
+                <input type="text" id="otroCliente" name="OtroTipoCliente" placeholder="Especifica el tipo de cliente">
+            </div>
+
+            <!-- SERVICIO -->
+
+
+            <h2> Servicio solicitado </h2>
+
+            <select id="categoria" name="Categoria" required>
+
+                <option value=""> Seleccione categoría </option>
+                <option value="desarrollo"> Desarrollo Web </option>
+                <option value="diseno"> Diseño Gráfico </option>
+                <option value="soporte"> Soporte Técnico </option>
+                <option value="mentorias"> Mentorías Académicas </option>
+                <option value="adaptacion"> Adaptación e Integración </option>
+                <option value="academico"> Desarrollo Académico </option>
+                <option value="emprendimiento"> Emprendimiento e Innovación </option>
+                <option value="asesoria"> Asesoría Tecnológica </option>
+                <option value="plataforma">Plataforma Digital </option>
+                <option value="comunidad"> Comunidad y Networking </option>
+                <option value="eventos"> Eventos y Capacitaciones </option>
+
+            </select>
+
+            <select id="servicio" name="Servicio" required>
+                <option> Primero seleccione una categoría </option>
+            </select>
+
+            <div id="otroServicioContainer" style="display: none;">
+                <input type="text" id="otroServicio" name="OtroServicio"
+                    placeholder="Describe el servicio que necesitas">
+            </div>
+
+            <h2> Detalles de la solicitud </h2>
+
+            <textarea name="Descripcion" placeholder="
+                Explique qué necesita, por qué solicita este servicio y qué espera obtener." required>
+            </textarea>
+
+            <select name="Modalidad">
+                <option> Modalidad preferida </option>
+                <option> Presencial </option>
+                <option> Virtual </option>
+                <option> Sin preferencia </option>
+            </select>
+
+            <select name="Disponibilidad">
+                <option> Disponibilidad </option>
+                <option> Mañana </option>
+                <option> Tarde </option>
+                <option> Noche </option>
+                <option> Fines de semana </option>
+            </select>
+
+            <h2> Archivos adjuntos </h2>
+
+            <input type="file" name="Archivo">
+
+            <label class="check">
+                <input type="checkbox" name="Aceptacion">
+                Acepto que la información proporcionada será utilizada para gestionar mi solicitud.
+            </label>
+
+            <button type="submit"> Enviar Solicitud </button>
+
+        </form>
+    </section>
+
+    <!-- MODAL CONFIRMACIÓN -->
+    <div class="modal-confirmacion" id="modalConfirmacion">
+        <div class="modal-card">
+            <div class="check-icon"> ✓ </div>
+
+            <h2> ¡Solicitud enviada! </h2>
+            <p>
+                Gracias por contactar con NOXXITY.
+                Hemos recibido tu solicitud correctamente.
+                Nuestro equipo revisará la información y se comunicará contigo.
+            </p>
+            <button id="cerrarModal"> Continuar </button>
+        </div>
+
+    </div>
+
+    <script src="Js/servicios.js"></script>
+
+</body>
+
+</html>

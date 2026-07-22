@@ -1,0 +1,658 @@
+/* ==========================
+        GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ==========================
+        VARIABLES
+========================== */
+
+:root{
+
+    --primary:#008cff;
+    --primary-light:#4db3ff;
+
+    --background:#080b12;
+    --card:#111827;
+
+    --input:#1b2433;
+
+    --text:#ffffff;
+    --gray:#a5adba;
+
+    --border:rgba(255,255,255,.08);
+
+}
+
+
+/* ==========================
+        RESET
+========================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+
+}
+
+
+body{
+
+    background:
+    radial-gradient(circle at top,rgba(0,140,255,.25),transparent 45%),
+    var(--background);
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+
+
+/* ==========================
+        NAVBAR
+========================== */
+
+
+.navbar{
+
+    width:100%;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+}
+
+
+.logo{
+    font-size:2.5rem;
+    font-weight:700;
+    text-decoration: none;
+    list-style: none;
+    color: #38bdf8;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.navbar a:last-child{
+
+    color:var(--gray);
+
+    transition:.3s;
+
+}
+
+
+.navbar a:last-child:hover{
+
+    color:var(--primary);
+
+}
+
+
+
+/* ==========================
+        CONTAINER
+========================== */
+
+
+.form-container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:30px auto 80px;
+
+    background:rgba(17,24,39,.85);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:45px;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.4);
+
+}
+
+
+
+/* ==========================
+        HEADER
+========================== */
+
+
+.form-header{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.form-header h1{
+
+    font-size:2.5rem;
+
+    margin-bottom:15px;
+
+}
+
+
+.form-header h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:4px;
+
+    background:var(--primary);
+
+    margin:15px auto;
+
+    border-radius:10px;
+
+}
+
+
+.form-header p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+}
+
+
+
+/* ==========================
+        TITULOS
+========================== */
+
+
+form h2{
+    margin:35px 0 20px;
+    font-size:24px;
+    color:#38bdf8;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+/* ==========================
+        GRID
+========================== */
+
+.tipo-cliente{
+    margin-top: 20px;
+}
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+
+/* ==========================
+        INPUTS
+========================== */
+
+
+input,
+select,
+textarea{
+
+
+    width:100%;
+
+    padding:15px 18px;
+
+    background:var(--input);
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:.95rem;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#8993a4;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+
+    border-color:var(--primary);
+
+    box-shadow:
+    0 0 15px rgba(0,140,255,.25);
+
+
+}
+
+
+
+/* SELECT */
+
+select{
+
+    margin-bottom:20px;
+
+    cursor:pointer;
+
+}
+
+
+select option{
+
+    background:#111827;
+
+}
+
+
+
+
+
+/* TEXTAREA */
+
+
+textarea{
+
+    height:160px;
+
+    resize:none;
+
+}
+
+
+
+/* ==========================
+        FILE
+========================== */
+
+
+input[type="file"]{
+
+    cursor:pointer;
+
+    background:var(--input);
+
+}
+
+
+
+/* ==========================
+        CHECKBOX
+========================== */
+
+
+.check{
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:center;
+
+    margin:30px 0;
+
+    color:var(--gray);
+
+    font-size:.9rem;
+
+}
+
+
+.check input{
+
+    width:auto;
+
+}
+
+
+
+/* ==========================
+        BUTTON
+========================== */
+
+
+button{
+
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+
+    background:var(--primary-light);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 10px 30px rgba(0,140,255,.35);
+
+
+}
+
+
+
+/* ==========================
+        ANIMACIÓN
+========================== */
+
+
+.form-container{
+
+    animation:
+
+    aparecer .8s ease;
+
+}
+
+
+@keyframes aparecer{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+
+@media(max-width:750px){
+
+
+    .form-container{
+
+        padding:25px;
+
+    }
+
+
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .form-header h1{
+
+        font-size:2rem;
+
+    }
+
+
+
+    .navbar{
+
+        padding:20px;
+
+    }
+
+
+}
+
+/* ==========================
+      MODAL CONFIRMACIÓN
+========================== */
+
+
+.modal-confirmacion{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(8px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+
+.modal-confirmacion.active{
+
+    display:flex;
+
+}
+
+
+
+.modal-card{
+
+
+    width:90%;
+    max-width:420px;
+
+    background:#111827;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    border:1px solid rgba(0,140,255,.3);
+
+    animation:modalEntrada .4s ease;
+
+
+}
+
+
+
+.check-icon{
+
+
+    width:80px;
+    height:80px;
+
+    background:#008cff;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.modal-card h2{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.modal-card p{
+
+    color:#aaa;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.modal-card button{
+
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:30px;
+
+    background:#008cff;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+
+}
+
+
+
+.modal-card button:hover{
+
+    background:#4db3ff;
+
+}
+
+
+
+@keyframes modalEntrada{
+
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+#otroClienteContainer{
+    display: none;
+    margin-top: 15px;
+}

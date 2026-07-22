@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*==========================
+        VARIABLES
+==========================*/
+
+:root{
+    --primary:#0A84FF;
+    --primary-light:#4DA3FF;
+    --dark:#0F172A;
+    --dark-card:#161B22;
+    --dark-light:#1F2630;
+    --white:#F5F5F5;
+    --gray:#A0A0A0;
+    --border:rgba(255,255,255,.08);
+}
+
+/*==========================
+        HERO
+==========================*/
+nav{
+    background: none;
+}
+
+.main{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 8%;
+    background:
+    radial-gradient(circle at top,rgba(10,132,255,.25),transparent 60%),
+    var(--dark);
+}
+
+.main a{
+    text-decoration:none;
+    list-style: none;
+    color: #ddd;
+}
+
+.cta a{
+    text-decoration:none;
+    list-style: none;
+    color: #ddd;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.main h1{
+    font-size:3.8rem;
+    margin-bottom:20px;
+}
+
+.main p{
+    color:var(--gray);
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.btn-primary{
+    display:inline-block;
+    padding:15px 35px;
+    background:var(--primary);
+    border-radius:50px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-primary:hover{
+    background:var(--primary-light);
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(10,132,255,.35);
+}
+
+/*==========================
+        TITULOS
+==========================*/
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.4rem;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+/*==========================
+        SERVICIOS
+==========================*/
+
+.services{
+    padding:100px 10%;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.service-card{
+    background:var(--dark-card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    background:rgba(10,132,255,.08);
+    border-radius:50%;
+    top:-70px;
+    right:-70px;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.icon{
+    width:70px;
+    height:70px;
+    background:rgba(10,132,255,.15);
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.icon i{
+    font-size:2rem;
+    color:var(--primary);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:var(--gray);
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.service-card ul li{
+    margin-bottom:10px;
+    color:#ddd;
+}
+
+.service-card ul li::before{
+    content:"✓ ";
+    color:var(--primary);
+}
+
+.service-card button{
+    margin-top:25px;
+    width:100%;
+    border:none;
+    cursor:pointer;
+    padding:14px;
+    border-radius:12px;
+    background:var(--primary);
+    color:white;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.service-card button:hover{
+    background:var(--primary-light);
+}
+
+.src{
+    width: 100%;
+    height: 10vh;
+    margin: auto;
+    text-align: center;
+}
+
+.src a{
+    border:none;
+    cursor:pointer;
+    padding:14px;
+    border-radius:12px;
+    background:transparent;
+    border: 1px solid #0A84FF;
+    color:white;
+    font-size:1rem;
+    transition:.3s;
+    text-decoration: none;
+}
+
+.src a:hover{
+    background: #0A84FF;
+}
+
+/*==========================
+        BENEFICIOS
+==========================*/
+
+.benefits{
+    padding:100px 8%;
+    background:var(--dark-card);
+}
+
+.benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.benefit{
+    text-align:center;
+    padding:35px;
+}
+
+.benefit i{
+    font-size:2.4rem;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.benefit h3{
+    margin-bottom:15px;
+}
+
+.benefit p{
+    color:var(--gray);
+    line-height:1.6;
+}
+
+/*==========================
+        CTA
+==========================*/
+
+.cta{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:2.7rem;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:var(--gray);
+    max-width:700px;
+    margin:0 auto 35px;
+    line-height:1.8;
+}
+
+/*==========================
+        FOOTER
+==========================*/
+
+footer{
+    text-align:center;
+    border-top:1px solid var(--border);
+    color:var(--gray);
+}
+
+
+/*==========================
+    ANIMACIONES SCROLL
+==========================*/
+
+.hidden{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon{
+    transition: .35s ease;
+}
+
+.navbar{
+    transition: .3s ease;
+}
