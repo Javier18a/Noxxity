@@ -2,23 +2,7 @@
         NAVBAR SCROLL
 ==========================*/
 
-const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 50){
-
-        navbar.style.background = "rgba(13,17,23,.98)";
-        navbar.style.boxShadow = "0 8px 20px rgba(0,0,0,.35)";
-
-    }else{
-
-        navbar.style.background = "rgba(13,17,23,.90)";
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
 
 /*==========================
     ANIMACIÓN DE TARJETAS

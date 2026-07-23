@@ -18,8 +18,12 @@
 /*==========================
         HERO
 ==========================*/
+
+header{
+    background: transparent;
+}
 nav{
-    background: none;
+    background: transparent;
 }
 
 .main{
