@@ -28,12 +28,13 @@
             </p>
         </div>
 
-        <form action="https://formsubmit.co/noxxity.oficial@gmail.com" method="POST" enctype="multipart/form-data">
+        <form id="formSolicitud" action="https://formsubmit.co/ajax/noxxity.oficial@gmail.com" method="POST">
 
             <!-- CONFIGURACIÓN FORMSUBMIT -->
-            <input type="hidden" name="_subject" value="Nueva Solicitud NOXXITY">
+            <input type="hidden" name="_subject" value="Nueva Solicitud de Servicio - NOXXITY">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="Sistema" value="Centro de Solicitudes NOXXITY">
 
             <!-- DATOS PERSONALES -->
 
@@ -84,7 +85,7 @@
             </select>
 
             <select id="servicio" name="Servicio" required>
-                <option> Primero seleccione una categoría </option>
+                <option value=""> Primero seleccione una categoría </option>
             </select>
 
             <div id="otroServicioContainer" style="display: none;">
@@ -94,31 +95,28 @@
 
             <h2> Detalles de la solicitud </h2>
 
-            <textarea name="Descripcion" placeholder="
-                Explique qué necesita, por qué solicita este servicio y qué espera obtener." required>
-            </textarea>
+            <textarea 
+                name="Descripcion"
+                placeholder="Explique qué necesita, por qué solicita este servicio y qué espera obtener."
+                required></textarea>
 
             <select name="Modalidad">
-                <option> Modalidad preferida </option>
-                <option> Presencial </option>
-                <option> Virtual </option>
-                <option> Sin preferencia </option>
+                <option value="">Modalidad preferida</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+                <option value="Sin preferencia">Sin preferencia</option>
             </select>
 
             <select name="Disponibilidad">
-                <option> Disponibilidad </option>
-                <option> Mañana </option>
-                <option> Tarde </option>
-                <option> Noche </option>
-                <option> Fines de semana </option>
+                <option value="">Disponibilidad</option>
+                <option value="Mañana">Mañana</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noche">Noche</option>
+                <option value="Fines de semana">Fines de semana</option>
             </select>
 
-            <h2> Archivos adjuntos </h2>
-
-            <input type="file" name="Archivo">
-
             <label class="check">
-                <input type="checkbox" name="Aceptacion">
+                <input type="checkbox" name="Aceptacion" value="Sí" required>
                 Acepto que la información proporcionada será utilizada para gestionar mi solicitud.
             </label>
 
@@ -138,7 +136,7 @@
                 Hemos recibido tu solicitud correctamente.
                 Nuestro equipo revisará la información y se comunicará contigo.
             </p>
-            <button id="cerrarModal"> Continuar </button>
+            <button type="button" id="cerrarModal"> Continuar </button>
         </div>
 
     </div>

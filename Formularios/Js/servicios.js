@@ -232,17 +232,8 @@ servicio.addEventListener("change", () => {
 
 });
 
-const formulario = document.querySelector("form");
 const modal = document.getElementById("modalConfirmacion");
 const cerrar = document.getElementById("cerrarModal");
-
-formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
-    modal.classList.add("active");
-    setTimeout(() => {
-        formulario.submit();
-    }, 2500);
-});
 
 cerrar.addEventListener("click", () => {
     modal.classList.remove("active");
@@ -301,4 +292,59 @@ categoria.addEventListener("change", () => {
 
 });
 
+/* ==========================
+   ENVÍO DEL FORMULARIO
+========================== */
 
+const form = document.getElementById("formSolicitud");
+
+form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+
+        const respuesta = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+
+        const resultado = await respuesta.json();
+
+        console.log(resultado);
+
+
+        if (resultado.success || resultado.éxito === "verdadero" || resultado.success === "true") {
+
+            console.log("Formulario enviado correctamente");
+
+            modal.classList.add("active");
+
+            form.reset();
+
+            servicio.innerHTML = `
+        <option value="">
+            Primero seleccione una categoría
+        </option>
+    `;
+
+            otroClienteContainer.style.display = "none";
+            otroServicioContainer.style.display = "none";
+
+        }
+
+
+    } catch (error) {
+
+        console.error(error);
+        alert("Error al enviar la solicitud.");
+
+    }
+
+});
